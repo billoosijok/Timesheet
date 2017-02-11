@@ -1,0 +1,264 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	
+	font-family: 'SF UI Display', 'Arsenal', Helvetica;
+	font-size: 40px;
+	font-weight: 400;
+	transition: font-size 0.3s;
+}
+header {
+	text-align: center;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 1.1em;
+}
+
+h4 {
+	font-size: 0.7em;
+	margin: 0;
+}
+
+section.main  {
+	max-width: 700px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+#controls {
+	/*margin-bottom: 20px;*/
+}
+
+button[disabled] {
+	opacity: 0;
+}
+
+.button {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	font-size: 0.6em;
+	background-color: transparent;
+	border: none;
+	transition: color 0.2s;
+	transition: height 0.2s;
+	transition: width 0.2s;
+	text-transform: capitalize;
+}
+
+
+.button:not([disabled]) {
+	cursor: pointer;
+}
+
+#sign-in {
+	color: blue;
+}
+
+
+#sign-in.button:hover {
+	color: darkblue;
+}
+
+#sign-out {
+	color: red;
+}
+
+#sign-out:hover {
+	color: darkred;
+}
+
+#pause:hover {
+	color: grey;
+}
+
+#duration {
+	font-size: 3.1em;
+	display: flex;
+	justify-content: center;
+	transition: font-size 0.3s;
+}
+
+#duration span:nth-child(odd) {
+	margin: 0 10px;
+	width: 20%;
+}
+
+#duration span:nth-child(even) {
+	margin: 0 10px;
+}
+
+#startTime {
+	font-size: 0.5em;
+	height: 30px;
+}
+
+#status {
+	font-size: 0.5em;
+	overflow: hidden;
+	color: #806000;
+}
+
+#status img {
+	height: 0.9em;
+}
+
+#hist {
+	text-align: left;
+	max-width: 250px;
+}
+
+#hist header {
+	position: relative;
+	height: 40px;
+	overflow: hidden;
+	width: 80%;	
+}
+
+#hist header > * {
+	position: absolute;
+	top: 10%;
+}
+
+#hist header > h4 {
+	left: 0;
+}
+
+#hist header > #menuBar {
+	right: -180px;
+	font-size: 16px;
+	width: 100%;
+	padding: 10px 0 0 0;
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	list-style: none;
+	height: 100%;
+}
+	
+#hist header > #menuBar * {
+	background-color: transparent;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: capitalize;
+	font-weight: bold;
+	color: blue;
+}
+
+#menuBar *[role='option'] {
+	padding: 0;
+	margin: 0;
+}
+
+#menuBar *[disabled='disabled'] {
+	cursor: auto;
+	opacity: 0.5;
+}
+
+#menuBar img {
+	width: 15px;
+	transition: transform 0.2s;
+}
+
+#menuBar .on img {
+	transform: rotate(180deg);
+}
+#menuBar .off img {
+	transform: rotate(0deg);
+}
+
+#menuBar .on li {
+	opacity: 1;
+}
+
+#menuBar .off li:not(#menuBar li:first-child) {
+	opacity: 0;
+}
+
+#menuBar form, #menuBar input {
+	margin: 0;
+	padding: 0;
+}
+
+#hist td {
+	padding: 3px 10px 3px 0;
+}
+
+#hist .delete button {
+	opacity: 0;
+	color: black;
+	border-radius: 0;
+	background-color: transparent;
+	border:none;
+	
+	transition: opacity 0.2s;
+	color: red;
+	font-size: 0.8em;
+}
+
+#hist .delete button:not([disabled]) {
+	cursor: pointer;
+}
+
+#histTable {
+	width: 100%;
+}
+#hist tr > td:first-child {
+	font-weight: bold;
+}
+
+div.info {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+div.info > * {
+	margin: 40px;
+}
+
+
+@keyframes rotateImage {
+	0% {
+		rotate(0deg);
+	}
+	100% {
+		rotate(180deg);
+	}
+}
+
+@media (max-width: 650px) {
+	body {
+		font-size: 25px;
+	}
+
+	.button {
+		width: auto;
+		height: auto;
+		padding: 1px 1px;
+	}
+
+	#hist {
+		font-size: 1.4em;
+	}
+}
+
+@media (max-width: 450px) {
+	#duration {
+		font-size: 2.0em;
+		margin: 0;
+	}
+
+	#hist {
+		font-size: 1.4em;
+		margin: auto;
+	}
+
+
+}
