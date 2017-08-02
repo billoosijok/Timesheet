@@ -435,7 +435,7 @@ function Timesheet(options) {
             // Hiding history table
             historyPanel.style.opacity = 0;
             signInButton.innerHTML = "&nbsp;";
-            setTimeout(function() {updateTextContent(signInButton, 'sign in')}, 2500);
+            setTimeout(function() {updateTextContent(signInButton, 'Start')}, 2500);
         }
 
         appContainer.style.opacity = 0;
