@@ -93,7 +93,7 @@ function Timesheet(options) {
             }
             
             animate(durationOutput, 'opacity', '0', 100);
-            moveElement(durationOutput, newRecord, 100, function() {
+            moveElement(durationOutput, newRecord, 300, function() {
                 
                 updateTextContent(newRecord, newRecord.innerHTML);
                 animate(newRecord, 'height', newRecordOriginalHeight);
